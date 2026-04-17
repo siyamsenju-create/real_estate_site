@@ -1,0 +1,67 @@
+.heroContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvasWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.uiOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  pointer-events: none; // let scroll go to the canvas if needed
+}
+
+.textContent {
+  pointer-events: auto;
+  max-width: 600px;
+  
+  h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-sm);
+    
+    span {
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+.ctaButton {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+  border-radius: 50px;
+  transition: box-shadow 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+}

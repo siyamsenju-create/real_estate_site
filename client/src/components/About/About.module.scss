@@ -1,0 +1,93 @@
+.aboutSection {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.textContent {
+  max-width: 600px;
+  
+  .subtitle {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.1;
+  }
+
+  .description {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+.readMoreBtn {
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--color-primary);
+    color: var(--color-surface);
+  }
+}
+
+.imageContainer {
+  position: relative;
+  height: 60vh;
+  min-height: 500px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 130%; // taller to allow for parallax scrolling
+  position: absolute;
+  top: -15%;
+  left: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8) contrast(1.2);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, var(--color-surface) 0%, transparent 20%);
+}

@@ -1,0 +1,79 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: all 0.4s ease;
+  
+  &.scrolled {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 5%;
+  }
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  
+  span {
+    font-weight: 800;
+    color: var(--color-primary);
+  }
+}
+
+.navLinks {
+  display: none;
+  gap: 3rem;
+  
+  @media (min-width: 768px) {
+    display: flex;
+  }
+  
+  a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--color-primary);
+      transition: width 0.3s ease;
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.menuBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  
+  @media (min-width: 768px) {
+    display: none; // hide on desktop for now, just a placeholder
+  }
+
+  .line {
+    width: 30px;
+    height: 2px;
+    background: var(--color-text);
+    transition: all 0.3s ease;
+  }
+}
