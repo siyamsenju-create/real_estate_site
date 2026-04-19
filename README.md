@@ -1,3 +1,5 @@
+<img width="1331" height="803" alt="Screenshot 2026-04-19 at 12 43 34 PM" src="https://github.com/user-attachments/assets/35a5de5b-6c34-42dd-b86e-2840a5e9d141" />
+<img width="1326" height="803" alt="Screenshot 2026-04-19 at 12 42 32 PM" src="https://github.com/user-attachments/assets/51ff9b8c-4fd7-4d69-840c-b7c90a5f7327" />
 # 🏙️ 3D Animated Real Estate Platform (MERN Stack)
 
 A premium full-stack real estate web application featuring immersive 3D animations, cinematic scrolling, and modern UI/UX. Built using the MERN stack with a strong focus on performance, interactivity, and conversion-driven design.
